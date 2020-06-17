@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Airway2rs and Travel</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<!-- Old version of Bootstrap (ver.3) and jQuery -->
+	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+
+	<!-- Newer version of Bootstrap (ver.4) and jQuery -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	 crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+	 crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+	 crossorigin="anonymous"></script>
+
+	<!-- Custom CSS and JavaScript-->
+	<link rel="stylesheet" href="css/style.css">
+	<script type="text/javascript" src="js/script.js"></script>
+</head>
+
+<body>
+	<div class="container-video">
+		<!------------ Video from local storage ------------>
+		<!-- <video id="video" preload="auto" autoplay="true" loop="loop" muted="muted" volume="0">
+			<source src="video/Airway2rs.mp4" type="video/mp4">
+		</video> -->
+
+		<!------------ Vimeo Test ------------>
+		<!-- <div style="padding:56.25% 0 0 0;position:relative;">
+			<iframe src="https://player.vimeo.com/video/294800613?muted=1&autoplay=1&loop=1&background=1"
+			 style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen
+			 mozallowfullscreen allowfullscreen></iframe>
+		</div> -->
+
+		<!------------ Youtube Test ------------>
+		<div style="padding:56.25% 0 0 0;position:relative;">
+			<iframe src="https://www.youtube.com/embed/rztICduONrk?autoplay=1&showinfo=0&disablekb=1&controls=0&mute=1&loop=1&playlist=rztICduONrk"
+			 style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; loop; encrypted-media"
+			 allowfullscreen></iframe>
+		</div>
+
+		<div class="top-overlay"></div>
+		<div class="logo">
+			<a href="index.html">
+				<img src="img/logo.png" height="90px" width="180px">
+			</a>
+		</div>
+		<div class="menu" id="mainmenu">
+			<a onclick="scrolling(aboutus)">About Us</a>
+			<a onclick="scrolling(destination)">Destination</a>
+			<a onclick="scrolling(packages)">Packages</a>
+			<a onclick="scrolling(tours)">Tours</a>
+			<a href="contactForm.html">Contact Us</a>
+		</div>
+
+		<div class="overlay-main">
+			<div id="travel-quote">
+				<!-- <h3>Be Adventurous,</h3><h1>The World Awaits</h1> -->
+				<h3>The Journey is</h3>
+				<h1>The Destination</h1>
+			</div>
+			<button style="background-color: transparent;border:none;">
+				<a href="#destination" onclick="scrolling(destination)">
+					<img src="img/play.png" width="50px" height="50px">
+				</a>
+			</button>
+		</div>
+	</div>
+
+	<!-- Start of About us -->
+	<div class="container container-main text-center" id="aboutus">
+		<div class="row">
+			<div class="col-md-12">
+				<h2 class="page-title">About Us</h2>
+				<br />
+				<p>At Airway 2rs and Travel, we understand that travel can be circumstance specific. Whether you are travelling for
+					business, pleasure, emergencies, or for educational purposes, our dedicated team of travel professionals are
+					available to provide quality assistance for your travel needs. We offer independent, semi-independent and guided
+					tours, with each offering various flexibility to create your perfect getaway.</p>
+			</div>
+		</div>
+	</div>
+
+	<!-- <hr /> -->
+	<img src="img/destination.png" alt="featured packages" style="width: 100%;">
+
+	<!-- Start of worldmap destination -->
+	<div class="worldmap" id="destination">
+		<h2 class="text-center package-title">Select Your Destination</h2>
+		<br />
+		<object type="text/html" id="dest-world" data="Worldmap/map.html"></object>
+	</div>
+
+	<!-- <hr /> -->
+	<img src="img/featured_packages.png" alt="featured packages" style="width: 100%;">
+
+	<!-- Start of featured package -->
+	<div class="container container-main text-center" id="packages">
+		<h2 class="package-title">Featured Packages</h2>
+		<br />
+		<div class="row">
+			<!-- First Feature Package -->
+			<div class="col-md-4 col-sm-4 col-xs-4">
+				<img src="img/amalfi-coast-2180537_1920.jpg" id="pkg-img">
+				<h4 class="bold">Amalfi Coast Package</h4>
+				<span>starting from</span>
+				<h5 class="price">CA$ 844.00</h5>
+				<p>Tourism means people traveling for fun. It includes activities such as sightseeing and camping. People who
+					travel for fun are called "tourists". Places where many tourists stay are called "resorts". Places that people go
+					to for tourism are called tourist destinations.</p>
+				<button data-toggle="modal" data-target="#myModal1" class="btn btn-primary pkgbutton">More Details</button>
+
+				<div class="modal fade" id="myModal1" role="dialog">
+					<div class="modal-dialog modal-lg">
+						<!-- Modal content-->
+						<div class="modal-content">
+							<div class="modal-header">
+								<h3 class="modal-title bold">Amalfi Coast Package</h3>
+								<button type="button" class="close" data-dismiss="modal">&times;</button>
+							</div>
+
+							<div class="modal-body text-left">
+								<h5 class="bold" id="center">3 Days / 2 Nights</h5>
+								<p>Experience the picturesque views of the Amalfi coast, the historical Pompeii, Naples, and everything in
+									between. This tour will depart from Rome at 7:30am and travel to Naples. You will stop to see the sights in
+									Naples and then continue on to Pompeii. You will spend time seeing the sights of Pompeii and stop by a vendor
+									market where you will see souvenirs made with a technique dating back to the Greek times that can be purchased
+									and admired. After this you will continue on to the Amalfi Coast and check in to your hotel where you will
+									have dinner. The second day will be spent in the coastal village of beautiful Amalfi. You have the option of
+									taking a shuttle to a nearby private beach, or taking in the sights of the city. You may also arrange other
+									excursions. You will have dinner and spend another night at the hotel. On the third day you will have
+									breakfast and can have the morning to your leisure as the bus will depart Amalfi at 3:30pm. Traffic permitting
+									you will be back in Rome at around 9:00pm.
+								</p>
+								<br />
+								<h6 class="bold">Amalfi Coast Package Includes:</h6>
+								<ul class="modal-italic">
+									<li>Accommodations in a 4 Star Hotel</li>
+									<li>Daily Buffet Breakfast</li>
+									<li>aily Buffet Breakfast</li>
+									<li>Two Dinners</li>
+									<li>An educational excursion in Pompeii</li>
+									<li>One Lunch in Pompeii</li>
+									<li>Transportation in an Air Conditioned Coach</li>
+									<li>Paid Entrance Fees to all historical sights</li>
+								</ul>
+							</div>
+
+							<div class="modal-footer">
+								<button type="button" class="btn btn-primary modal-button" data-dismiss="modal">CLOSE</button>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--col-sm end 1st package -->
+
+			<!-- Second Feature Package -->
+			<div class="col-md-4 col-sm-4 col-xs-4">
+				<img src="img/colosseum-690384_1920.jpg" id="pkg-img">
+				<h4 class="bold">Tour Classical Rome</h4>
+				<span>starting from</span>
+				<h5 class="price">CA$ 611.00</h5>
+				<p>Tourism means people traveling for fun. It includes activities such as sightseeing and camping. People who
+					travel for fun are called "tourists". Places where many tourists stay are called "resorts". Places that people go
+					to for tourism are called tourist destinations.</p>
+				<button data-toggle="modal" data-target="#myModal2" class="btn btn-primary pkgbutton">More Details</button>
+
+				<div class="modal fade" id="myModal2" role="dialog">
+					<div class="modal-dialog modal-lg">
+						<!-- Modal content-->
+						<div class="modal-content">
+							<div class="modal-header">
+								<h4 class="modal-title bold">Tour Classical Rome</h4>
+								<button type="button" class="close" data-dismiss="modal">&times;</button>
+							</div>
+
+							<div class="modal-body text-left">
+								<h5 class="bold" id="center">3 Days / 2 Nights</h5>
+								<p>Experience the picturesque views of the Amalfi coast, the historical Pompeii, Naples, and everything in
+									between. This tour will depart from Rome at 7:30am and travel to Naples. You will stop to see the sights in
+									Naples and then continue on to Pompeii. You will spend time seeing the sights of Pompeii and stop by a vendor
+									market where you will see souvenirs made with a technique dating back to the Greek times that can be purchased
+									and admired. After this you will continue on to the Amalfi Coast and check in to your hotel where you will
+									have dinner. The second day will be spent in the coastal village of beautiful Amalfi. You have the option of
+									taking a shuttle to a nearby private beach, or taking in the sights of the city. You may also arrange other
+									excursions. You will have dinner and spend another night at the hotel. On the third day you will have
+									breakfast and can have the morning to your leisure as the bus will depart Amalfi at 3:30pm. Traffic permitting
+									you will be back in Rome at around 9:00pm.
+								</p>
+							</div>
+
+							<div class="modal-footer">
+								<button type="button" class="btn btn-primary modal-button" data-dismiss="modal">CLOSE</button>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--col-sm end 2nd package-->
+
+			<!-- Third Feature Package -->
+			<div class="col-md-4 col-sm-4 col-xs-4">
+				<img src="img/rome-2040716_1920.jpg" id="pkg-img">
+				<h4 class="bold">La Griffe Hotel</h4>
+				<span>starting from</span>
+				<h5 class="price">CA$ 311.00</h5>
+				<p>Tourism means people traveling for fun. It includes activities such as sightseeing and camping. People who
+					travel for fun are called "tourists". Places where many tourists stay are called "resorts". Places that people go
+					to for tourism are called tourist destinations.</p>
+				<button data-toggle="modal" data-target="#myModal3" class="btn btn-primary pkgbutton">More Details</button>
+
+				<div class="modal fade" id="myModal3" role="dialog">
+					<div class="modal-dialog modal-lg">
+						<!-- Modal content-->
+						<div class="modal-content">
+							<div class="modal-header">
+								<h4 class="modal-title bold">La Griffe Hotel</h4>
+								<button type="button" class="close" data-dismiss="modal">&times;</button>
+							</div>
+
+							<div class="modal-body text-left">
+								<h5 class="bold" id="center">3 Days / 2 Nights</h5>
+								<p>Experience the picturesque views of the Amalfi coast, the historical Pompeii, Naples, and everything in
+									between. This tour will depart from Rome at 7:30am and travel to Naples. You will stop to see the sights in
+									Naples and then continue on to Pompeii. You will spend time seeing the sights of Pompeii and stop by a vendor
+									market where you will see souvenirs made with a technique dating back to the Greek times that can be purchased
+									and admired. After this you will continue on to the Amalfi Coast and check in to your hotel where you will
+									have dinner. The second day will be spent in the coastal village of beautiful Amalfi. You have the option of
+									taking a shuttle to a nearby private beach, or taking in the sights of the city. You may also arrange other
+									excursions. You will have dinner and spend another night at the hotel. On the third day you will have
+									breakfast and can have the morning to your leisure as the bus will depart Amalfi at 3:30pm. Traffic permitting
+									you will be back in Rome at around 9:00pm.
+								</p>
+							</div>
+
+							<div class="modal-footer">
+								<button type="button" class="btn btn-primary modal-button" data-dismiss="modal">CLOSE</button>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--col-sm end 3rd package-->
+		</div>
+		<!--Row end-->
+	</div>
+	<!--container-->
+	<!--end of featured package-->
+
+	<!-- <hr /> -->
+	<img src="img/tour_packages.png" alt="tour packages" style="width: 100%;">
+
+	<!-- Start of tour package -->
+	<div class="container container-main text-center" id="tours">
+		<h2 class="package-title">Explore our Tour Packages</h2>
+		<br />
+		<div class="row">
+			<div class="col-sm-4 col-xs-4">
+				<img src="img/india-232725_1920.jpg" id="pkg-img">
+				<br>
+				<h4 class="bold">Train Tours</h4>
+				<p>Tourism means people traveling for fun. It includes activities such as sightseeing and camping. People who
+					travel for fun are called "tourists". Places where many tourists stay are called "resorts". Places that people go
+					to for tourism are called tourist destinations.</p>
+				<a href="train.html" class="btn btn-primary pkgbutton" role="button" aria-pressed="true">Explore More</a>
+			</div>
+			<div class="col-sm-4 col-xs-4">
+				<img src="img/temple.jpg" id="pkg-img">
+				<br>
+				<h4 class="bold">Hertiage Tours</h4>
+				<p>Tourism means people traveling for fun. It includes activities such as sightseeing and camping. People who
+					travel for fun are called "tourists". Places where many tourists stay are called "resorts". Places that people go
+					to for tourism are called tourist destinations.</p>
+				<a href="heritage.html" class="btn btn-primary pkgbutton" role="button" aria-pressed="true">Explore More</a>
+			</div>
+			<div class="col-sm-4 col-xs-4">
+				<img src="img/buddha.jpg" id="pkg-img">
+				<br>
+				<h4 class="bold">Buddhist Tours</h4>
+				<p>Tourism means people traveling for fun. It includes activities such as sightseeing and camping. People who
+					travel for fun are called "tourists". Places where many tourists stay are called "resorts". Places that people go
+					to for tourism are called tourist destinations.</p>
+				<div class="text-center">
+					<a href="buddhist.html" class="btn btn-primary pkgbutton" role="button" aria-pressed="true">Explore More</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End of Tour package -->
+
+	<!-- Footer Starts Here -->
+	<div class="footer-top"></div>
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-7">
+					<div class="container-fluid" id="middle-content">
+						<div class="row">
+							<div class="col-md-3">
+								<a href="#"><img src="img/logo.png" class="icon"></a>
+							</div>
+							<div class="col-md-9">
+								<h2>Airway 2rs and Travel</h2>
+								<p id="copyright">Copyright &copy; 2018 Airway 2rs and Travel. All Rights Reserved.</p>
+								<div class="footer_menu">
+									<ul>
+										<li> | </li>
+										<li><a href="#">About</a></li>
+										<li> | </li>
+										<li><a href="#">Terms &amp; Conditions</a></li>
+										<li> | </li>
+										<li><a href="#">Privacy Policy</a></li>
+										<li> | </li>
+										<li><a href="#">Contact</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-5">
+					<div class="row">
+						<div class="col-md-6 contact">
+							<h5>ADDRESS</h5>
+							<p>Airway2rs and Travel <br />
+								5925 Airport Road Suite 100<br />
+								Mississauga, ON L4V 1W1</p>
+						</div>
+						<div class="col-md-6 contact">
+							<h5>CONTACT US</h5>
+							<p>1-905-672-1195<br />1-888-333-5559</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<hr />
+			<div class="container" id="bottom-logos">
+				<div class="row text-center">
+					<div class="col-md-12">
+						<a href="http://www.enit.it/" target="_blank"><img src="img/logo-enit.png" alt="enit.it" class="trvl-logo"></a>
+						<a href="http://tico.ca/" target="_blank"><img src="img/logo-tico.png" alt="enit.it" class="trvl-logo"></a>
+						<a href="http://www.acta.ca/" target="_blank"><img src="img/logo-acta.png" alt="enit.it" class="trvl-logo"></a>
+					</div>
+				</div>
+				<div class="row text-center">
+					<div class="col-md-12">
+						<span style="font-size: 8px;">
+							TICO Registration R 50018534 W 50018535
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- Footer Ends Here -->
+
+	<!-- Click to top button -->
+	<a class="top" onclick="scrollingTop()"><i class="fa fa-arrow-circle-up fa-3x"></i></a>
+
+</body>
+
+</html>

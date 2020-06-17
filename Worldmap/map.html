@@ -1,0 +1,567 @@
+<title>JQVMap</title>
+
+<!-- CSS -->
+<link href="css/jqvmap.css" media="screen" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+    crossorigin="anonymous">
+
+
+<!-- JS -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+<script src="https://germini.info/js/jqvmap/jqvmap/jquery.vmap.js" type="text/javascript"></script>
+<script src="https://germini.info/js/jqvmap/jqvmap/maps/jquery.vmap.world.js" type="text/javascript"></script>
+<script src="js/jquery.vmap.continents.js" type="text/javascript"></script>
+<script src="js/jquery.vmap.sampledata.js" type="text/javascript"></script>
+<script src="https://germini.info/js/jqvmap/jqvmap/data/jquery.vmap.programdata.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="css/vertical.news.slider.css?v=1.0">
+
+<!---->
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Raleway');
+    @import 'https://fonts.googleapis.com/css?family=Comfortaa:300,400,700&subset=cyrillic,cyrillic-ext,latin-ext';
+</style>
+
+<!-- Custom JavaScript and CSS files -->
+<script type="text/javascript" src="js/worldmap.js"></script>
+<link rel="stylesheet" href="css/worldmap.css">
+
+<body>
+    <div id="map-holder" style="width: 100%; height: auto;">
+        <div id="vmap"></div>
+    </div>
+
+    <!------------------------------------------------------------------------------------>
+    <!---------------------------------- Modal for Asia ---------------------------------->
+    <!------------------------------------------------------------------------------------>
+    <div id="myModal1" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">&nbsp;&nbsp;&nbsp;Asia</h3>
+                <span class="close1">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <div class="begin">
+                                <button onmouseover="openCity('Nepal')">
+                                    Nepal&nbsp;&nbsp;&nbsp;<i class="fas fa-plane"></i>
+                                </button>
+                                <button onmouseover="openCity('Sri Lanka')">
+                                    Sri Lanka&nbsp;&nbsp;&nbsp;<i class="fas fa-plane"></i>
+                                </button>
+                                <button onmouseover="openCity('Maldives')">
+                                    Maldives&nbsp;&nbsp;&nbsp;<i class="fas fa-plane"></i>
+                                </button>
+                                <button onmouseover="openCity('India')">
+                                    India&nbsp;&nbsp;&nbsp;<i class="fas fa-plane"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col-md-10">
+                            <div id="Nepal" class="container city">
+                                <div class="card">
+                                    <div class="clearfix">
+                                        <img class="img2" src="img/nepal2.jpg" alt="Nepal">
+                                        <h3>Nepal</h3>
+                                        <p>Nepal is a landlocked country in South Asia. It is located mainly in the
+                                            Himalayas but also includes parts of the Indo-Gangetic Plain. Nepal has a
+                                            diverse
+                                            geography, including fertile plains, subalpine forested hills, and
+                                            eight of the world's ten tallest mountains, including Mount Everest,
+                                            the highest point on Earth. Kathmandu is the nation's capital and
+                                            largest city. Nepal is a multiethnic nation with Nepali as the official
+                                            language.</p>
+                                        <a href="../nepal.html" target="_parent" class="btn btn-primary" role="button"
+                                            aria-pressed="true">Explore more</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="Sri Lanka" class="container city" style="display:none">
+                                <div class="card">
+                                    <div class="clearfix">
+                                        <img class="img2" src="img/s6.jpg" alt="Sri Lanka">
+                                        <h3>Sri Lanka</h3>
+                                        <p>Sri Lanka is an island country in South Asia, located in the Indian Ocean to
+                                            the southwest of the Bay of Bengal and to the southeast of the Arabian Sea.
+                                            It is separated from the Indian subcontinent by the Gulf of Mannar and the
+                                            Palk Strait. The legislative capital, Sri Jayawardenepura Kotte, is a
+                                            suburb of the commercial capital and largest city, Colombo.</p>
+                                        <a href="../srilanka.html" target="_parent" class="btn btn-primary" role="button"
+                                            aria-pressed="true">Explore more</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="Maldives" class="container city" style="display:none">
+                                <div class="card">
+                                    <div class="clearfix">
+                                        <img class="img2" src="img/Maldives3.jpg" alt="Maldives">
+                                        <h3>Maldives</h3>
+                                        <p>The Maldives is a South Asian sovereign state, located in the Indian Ocean,
+                                            situated in the Arabian Sea. It lies southwest of Sri Lanka and India. The
+                                            chain of 26 atolls stretches from Ihavandhippolhu Atoll in the north to the
+                                            Addu City in the south. The Maldives is one of the world's most
+                                            geographically dispersed countries. Malé is the capital and most populated
+                                            city, traditionally called the "King's Island" for its central location.</p>
+                                        <a href="../maldives.html" target="_parent" class="btn btn-primary" role="button"
+                                            aria-pressed="true">Explore more</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="India" class="container city" style="display:none">
+                                <div class="card">
+                                    <div class="clearfix">
+                                        <img class="img2" src="img/India.jpg" alt="India">
+                                        <h3>India</h3>
+                                        <p>India is a country in South Asia. It is the seventh-largest country by area,
+                                            the second-most populous country (with over 1.2 billion people), and the
+                                            most populous democracy in the world. It is bounded by the Indian Ocean on
+                                            the south, the Arabian Sea on the southwest, and the Bay of Bengal on the
+                                            southeast. It shares land borders with Pakistan to the west; China, Nepal,
+                                            and Bhutan to the northeast; and Bangladesh and Myanmar to the east. In the
+                                            Indian Ocean, India is in the vicinity of Sri Lanka and the Maldives.
+                                            India's Andaman and Nicobar Islands share a maritime border with Thailand
+                                            and Indonesia.</p>
+                                        <a href="../india.html" target="_parent" class="btn btn-primary" role="button"
+                                            aria-pressed="true">Explore more</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!------------------------------------------------------------------------------------>
+    <!------------------------------ Modal for South Africa ------------------------------>
+    <!------------------------------------------------------------------------------------>
+    <div id="myModal2" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">&nbsp;&nbsp;&nbsp;Africa</h3>
+                <span class="close2">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <div class="begin">
+                                <button onmouseover="openCity('southAfrica')">
+                                    South Africa&nbsp;&nbsp;&nbsp;<i class="fas fa-plane"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col-md-10">
+                            <div id="southAfrica" class="container city">
+                                <div class="card">
+                                    <div class="clearfix">
+                                        <img class="img2" src="img/south.jpg" alt="South Africa">
+                                        <h3>South Africa</h3>
+                                        <p>South Africa (the Republic of South Africa) is the southernmost country in
+                                            Africa. South Africa is the largest country in Southern Africa. It is the
+                                            southernmost country on the mainland of the Old World or the Eastern
+                                            Hemisphere. About 80 percent of South Africans are of Sub-Saharan African
+                                            ancestry, divided among a variety of ethnic groups speaking different
+                                            African languages, nine of which have official status. The remaining
+                                            population consists of Africa's largest communities of European (White),
+                                            Asian (Indian), and multiracial (Coloured) ancestry.</p>
+                                        <button type="button" class="btn btn-primary">Explore more</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!------------------------------------------------------------------------------------>
+    <!--------------------------------- Modal for Europe --------------------------------->
+    <!------------------------------------------------------------------------------------>
+    <div id="myModal3" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">&nbsp;&nbsp;&nbsp;Europe</h3>
+                <span class="close3">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <div class="begin">
+                                <button onmouseover="openCity('Italy')">
+                                    Italy&nbsp;&nbsp;&nbsp;<i class="fas fa-plane"></i>
+                                </button>
+                                <button onmouseover="openCity('England')">
+                                    England&nbsp;&nbsp;&nbsp;<i class="fas fa-plane"></i>
+                                </button>
+                                <button onmouseover="openCity('France')">
+                                    France&nbsp;&nbsp;&nbsp;<i class="fas fa-plane"></i>
+                                </button>
+                                <button onmouseover="openCity('Ireland')">
+                                    Ireland&nbsp;&nbsp;&nbsp;<i class="fas fa-plane"></i>
+                                </button>
+                                <button onmouseover="openCity('Portugal')">
+                                    Portugal&nbsp;&nbsp;&nbsp;<i class="fas fa-plane"></i>
+                                </button>
+                                <button onmouseover="openCity('Scotland')">
+                                    Scotland&nbsp;&nbsp;&nbsp;<i class="fas fa-plane"></i>
+                                </button>
+                                <button onmouseover="openCity('Spain')">
+                                    Spain&nbsp;&nbsp;&nbsp;<i class="fas fa-plane"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col-md-10">
+                            <div id="Italy" class="container city">
+                                <div class="card">
+                                    <div class="clearfix">
+                                        <img class="img2" src="img/Italy4.jpg" alt="Italy">
+                                        <h3>Italy</h3>
+                                        <p>Italy is a country in Europe. Located in the heart of the Mediterranean Sea,
+                                            Italy shares open land borders with France, Switzerland, Austria, Slovenia,
+                                            San Marino, and Vatican City. Italy has historically been home to a myriad
+                                            of peoples and cultures.</p>
+                                        <a href="../italy.html" target="_parent" class="btn btn-primary" role="button"
+                                            aria-pressed="true">Explore more</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="England" class="container city" style="display:none">
+                                <div class="card">
+                                    <div class="clearfix">
+                                        <img class="img2" src="img/England.jpg" alt="England">
+                                        <h3>England</h3>
+                                        <p>England is a country that is part of the United Kingdom. It shares land
+                                            borders with Scotland to the north and Wales to the west. The Irish Sea
+                                            lies northwest of England and the Celtic Sea lies to the southwest. England
+                                            is separated from continental Europe by the North Sea to the east and the
+                                            English Channel to the south. The country covers five-eighths of the island
+                                            of Great Britain, which lies in the North Atlantic, and includes over 100
+                                            smaller islands, such as the Isles of Scilly and the Isle of Wight.</p>
+                                        <button type="button" class="btn btn-primary">Explore more</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="France" class="container city" style="display:none">
+                                <div class="card">
+                                    <div class="clearfix">
+                                        <img class="img2" src="img/France.jpg" alt="France">
+                                        <h3>France</h3>
+                                        <p>France is a sovereign state whose territory consists of metropolitan France
+                                            in Western Europe, as well as several overseas regions and territories. The
+                                            metropolitan area of France extends from the Mediterranean Sea to the
+                                            English Channel and the North Sea, and from the Rhine to the Atlantic
+                                            Ocean. The overseas territories include French Guiana in South America and
+                                            several islands in the Atlantic, Pacific and Indian oceans. France is a
+                                            unitary semi-presidential republic with its capital in Paris, the country's
+                                            largest city and main cultural and commercial centre. Other major urban
+                                            centres include Marseille, Lyon, Lille, Nice, Toulouse and Strasbourg.</p>
+                                        <button type="button" class="btn btn-primary">Explore more</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="Ireland" class="container city" style="display:none">
+                                <div class="card">
+                                    <div class="clearfix">
+                                        <img class="img2" src="img/Ireland.jpg" alt="Ireland">
+                                        <h3>Ireland</h3>
+                                        <p>Ireland is an island in the North Atlantic. It is separated from Great
+                                            Britain to its east by the North Channel, the Irish Sea, and St George's
+                                            Channel. Ireland is the second-largest island of the British Isles, the
+                                            third-largest in Europe, and the twentieth-largest on Earth.</p>
+                                        <button type="button" class="btn btn-primary">Explore more</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="Portugal" class="container city" style="display:none">
+                                <div class="card">
+                                    <div class="clearfix">
+                                        <img class="img2" src="img/Portugal.jpg" alt="Portugal">
+                                        <h3>Portugal</h3>
+                                        <p>Portugal is a country located mostly on the Iberian Peninsula in
+                                            southwestern Europe. It is the westernmost country of mainland Europe,
+                                            bordered to the west and south by the Atlantic Ocean and to the north and
+                                            east by Spain. Its territory also includes the Atlantic archipelagos of the
+                                            Azores and Madeira, both autonomous regions with their own regional
+                                            governments.</p>
+                                        <button type="button" class="btn btn-primary">Explore more</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="Scotland" class="container city" style="display:none">
+                                <div class="card">
+                                    <div class="clearfix">
+                                        <img class="img2" src="img/Scotland.jpg" alt="Scotland">
+                                        <h3>Scotland</h3>
+                                        <p>Scotland is a country that is part of the United Kingdom and covers the
+                                            northern third of the island of Great Britain. It shares a border with
+                                            England to the south, and is otherwise surrounded by the Atlantic Ocean,
+                                            with the North Sea to the east and the North Channel and Irish Sea to the
+                                            south-west. In addition to the mainland, the country has more than 790
+                                            islands, including the Northern Isles and the Hebrides.</p>
+                                        <button type="button" class="btn btn-primary">Explore more</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="Spain" class="container city" style="display:none">
+                                <div class="card">
+                                    <div class="clearfix">
+                                        <img class="img2" src="img/Spain2.jpg" alt="Spain">
+                                        <h3>Spain</h3>
+                                        <p>Spain is a sovereign state mostly located on the Iberian Peninsula in
+                                            Europe. Spanish territory includes two large archipelagoes, the Balearic
+                                            Islands in the Mediterranean Sea and the Canary Islands off the African
+                                            Atlantic coast, two cities, Ceuta and Melilla, on the African mainland and
+                                            several small islands in the Alboran Sea near the African coast. Spain is
+                                            the only European country to have a border with an African country
+                                            (Morocco).</p>
+                                        <button type="button" class="btn btn-primary">Explore more</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!------------------------------------------------------------------------------------>
+    <!----------------------------- Modal for North America ------------------------------>
+    <!------------------------------------------------------------------------------------>
+    <div id="myModal4" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">&nbsp;&nbsp;&nbsp;North America</h3>
+                <span class="close4">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <div class="begin">
+                                <button onmouseover="openCity('Canada')">
+                                    Canada&nbsp;&nbsp;&nbsp;<i class="fas fa-plane"></i>
+                                </button>
+                                <button onmouseover="openCity('Hawaii')">
+                                    Hawaii&nbsp;&nbsp;&nbsp;<i class="fas fa-plane"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col-md-10">
+                            <div id="Canada" class="container city" style="display:none">
+                                <div class="card">
+                                    <div class="clearfix">
+                                        <img class="img2" src="img/canada.jpg" alt="Canada">
+                                        <h3>Canada</h3>
+                                        <p>Canada is a country located in the northern part of North America. Its ten
+                                            provinces and three territories extend from the Atlantic to the Pacific and
+                                            northward into the Arctic Ocean, covering 9.98 million square kilometres
+                                            (3.85 million square miles), making it the world's second-largest country
+                                            by total area. Canada's climate varies widely across its vast area, ranging
+                                            from arctic weather in the north, to hot summers in the southern regions,
+                                            with four distinct seasons.</p>
+                                        <a href="../canada.html" target="_parent" class="btn btn-primary" role="button"
+                                            aria-pressed="true">Explore more</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="Hawaii" class="container city">
+                                <div class="card">
+                                    <div class="clearfix">
+                                        <img class="img2" src="img/H1.jpg" alt="Hawaii">
+                                        <h3>Hawaii</h3>
+                                        <p>Hawaii is the 50th and most recent state to have joined the United States,
+                                            having received statehood on August 21, 1959. Hawaii is the only U.S. state
+                                            located in Oceania, the only U.S. state located outside North America, and
+                                            the only one composed entirely of islands. It is the northernmost island
+                                            group in Polynesia, occupying most of an archipelago in the central Pacific
+                                            Ocean.</p>
+                                        <a href="../hawaii.html" target="_parent" class="btn btn-primary" role="button"
+                                            aria-pressed="true">Explore more</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!------------------------------------------------------------------------------------>
+    <!----------------------------- Modal for South America ------------------------------>
+    <!------------------------------------------------------------------------------------>
+    <div id="myModal5" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">&nbsp;&nbsp;&nbsp;South America</h3>
+                <span class="close5">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <div class="begin">
+                                <button onmouseover="openCity('Argentina')">
+                                    Argentina&nbsp;&nbsp;&nbsp;<i class="fas fa-plane"></i>
+                                </button>
+                                <button onmouseover="openCity('Brazil')">
+                                    Brazil&nbsp;&nbsp;&nbsp;<i class="fas fa-plane"></i>
+                                </button>
+                                <button onmouseover="openCity('Chile')">
+                                    Chile&nbsp;&nbsp;&nbsp;<i class="fas fa-plane"></i>
+                                </button>
+                                <button onmouseover="openCity('Colombia')">
+                                    Colombia&nbsp;&nbsp;&nbsp;<i class="fas fa-plane"></i>
+                                </button>
+                                <button onmouseover="openCity('Costa Rica')">
+                                    Costa Rica&nbsp;&nbsp;&nbsp;<i class="fas fa-plane"></i>
+                                </button>
+                                <button onmouseover="openCity('Ecuador')">
+                                    Ecuador&nbsp;&nbsp;&nbsp;<i class="fas fa-plane"></i>
+                                </button>
+                                <button onmouseover="openCity('Peru')">
+                                    Peru&nbsp;&nbsp;&nbsp;<i class="fas fa-plane"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col-md-10">
+                            <div id="Argentina" class="container city">
+                                <div class="card">
+                                    <div class="clearfix">
+                                        <img class="img2" src="img/Argentina.jpg" alt="Argentina">
+                                        <h3>Argentina</h3>
+                                        <p>Argentina is a country located mostly in the southern half of South America.
+                                            Argentina is the eighth-largest country in the world, the fourth largest in
+                                            the Americas, and the largest Spanish-speaking nation. It is subdivided
+                                            into twenty-three provinces and one autonomous city, Buenos Aires, which is
+                                            the federal capital of the nation as decided by Congress. The provinces and
+                                            the capital have their own constitutions, but exist under a federal system.
+                                            Argentina claims sovereignty over part of Antarctica, the Falkland Islands,
+                                            and South Georgia and the South Sandwich Islands.</p>
+                                        <a href="../argentina.html" target="_parent" class="btn btn-primary" role="button"
+                                            aria-pressed="true">Explore more</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="Brazil" class="container city" style="display:none">
+                                <div class="card">
+                                    <div class="clearfix">
+                                        <img class="img2" src="img/brazil.jpg" alt="Brazil">
+                                        <h3>Brazil</h3>
+                                        <p>Brazil is the largest country in both South America and Latin America.
+                                            Brazil is the world's fifth-largest country by area and the sixth most
+                                            populous. The capital is Brasília, and the most populated city is São
+                                            Paulo. The federation is composed of the union of the 26 states, the
+                                            Federal District, and the 5,570 municipalities. It is the largest country
+                                            to have Portuguese as an official language and the only one in the
+                                            Americas; it is also one of the most multicultural and ethnically diverse
+                                            nations, due to over a century of mass immigration from around the world.</p>
+                                        <a href="../brazil.html" target="_parent" class="btn btn-primary" role="button"
+                                            aria-pressed="true">Explore more</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="Chile" class="container city" style="display:none">
+                                <div class="card">
+                                    <div class="clearfix">
+                                        <img class="img2" src="img/Chile2.jpg" alt="Chile">
+                                        <h3>Chile</h3>
+                                        <p>Chile is a South American country occupying a long, narrow strip of land
+                                            between the Andes to the east and the Pacific Ocean to the west. It borders
+                                            Peru to the north, Bolivia to the northeast, Argentina to the east, and the
+                                            Drake Passage in the far south. Chilean territory includes the Pacific
+                                            islands of Juan Fernández, Salas y Gómez, Desventuradas, and Easter Island
+                                            in Oceania. Chile also claims about 1,250,000 square kilometres (480,000 sq
+                                            mi) of Antarctica, although all claims are suspended under the Antarctic
+                                            Treaty.</p>
+                                        <a href="../chile.html" target="_parent" class="btn btn-primary" role="button"
+                                            aria-pressed="true">Explore more</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="Colombia" class="container city" style="display:none">
+                                <div class="card">
+                                    <div class="clearfix">
+                                        <img class="img2" src="img/C.jpg" alt="Colombia">
+                                        <h3>Colombia</h3>
+                                        <p>Colombia is a country largely situated in the northwest of South America,
+                                            with territories in Central America. Colombia is one of the most ethnically
+                                            and linguistically diverse countries in the world, and thereby possesses a
+                                            rich cultural heritage. The urban centres are mostly located in the
+                                            highlands of the Andes mountains.</p>
+                                        <a href="../colombia.html" target="_parent" class="btn btn-primary" role="button"
+                                            aria-pressed="true">Explore more</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="Costa Rica" class="container city" style="display:none">
+                                <div class="card">
+                                    <div class="clearfix">
+                                        <img class="img2" src="img/Cost.jpg" alt="Costa Rica">
+                                        <h3>Costa Rica</h3>
+                                        <p>Costa Rica is a country in Central America, bordered by Nicaragua to the
+                                            north, the Caribbean Sea to the northeast, Panama to the southeast, the
+                                            Pacific Ocean to the southwest, and Ecuador to the south of Cocos Island.
+                                            Costa Rica has been known for its stable democracy, in a region that has
+                                            had some instability, and for its highly educated workforce, most of whom
+                                            speak English.</p>
+                                        <a href="../costarica.html" target="_parent" class="btn btn-primary" role="button"
+                                            aria-pressed="true">Explore more</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="Ecuador" class="container city" style="display:none">
+                                <div class="card">
+                                    <div class="clearfix">
+                                        <img class="img2" src="img/E.jpg" alt="Ecuador">
+                                        <h3>Ecuador</h3>
+                                        <p>Ecuador is a country in northwestern South America, bordered by Colombia on
+                                            the north, Peru on the east and south, and the Pacific Ocean to the west.
+                                            Ecuador also includes the Galápagos Islands in the Pacific, about 1,000
+                                            kilometres (620 mi) west of the mainland. The capital city is Quito, while
+                                            the largest city is Guayaquil.</p>
+                                        <a href="../ecuador.html" target="_parent" class="btn btn-primary" role="button"
+                                            aria-pressed="true">Explore more</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="Peru" class="container city" style="display:none">
+                                <div class="card">
+                                    <div class="clearfix">
+                                        <img class="img2" src="img/peru.jpg" alt="Peru">
+                                        <h3>Peru</h3>
+                                        <p>Peru is a country in western South America. It is bordered in the north by
+                                            Ecuador and Colombia, in the east by Brazil, in the southeast by Bolivia,
+                                            in the south by Chile, and in the west by the Pacific Ocean. Peru is an
+                                            extremely biodiverse country with habitats ranging from the arid plains of
+                                            the Pacific coastal region in the west to the peaks of the Andes mountains
+                                            vertically extending from the north to the southeast of the country to the
+                                            tropical Amazon Basin rainforest in the east with the Amazon river.</p>
+                                        <a href="../peru.html" target="_parent" class="btn btn-primary" role="button"
+                                            aria-pressed="true">Explore more</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
